@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 import { useState } from "react";
-import { json } from "react-router";
+import { json, useParams } from "react-router";
 import ReactDOM from 'react-dom';
 import OAuth2Login from 'react-simple-oauth2-login';
 
@@ -9,8 +9,13 @@ export default function Login(props) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
-    const onSuccess = response => console.log(response);
-    const onFailure = response => console.error(response);
+    const REACT_APP_CLIENT_ID  = 108420;
+    const redirectUrl = "http://localhost:3000/hello";
+    const scope = "read"
+
+    const handleLogin = () => {
+        window.location = `http://www.strava.com/oauth/authorize?client_id=${REACT_APP_CLIENT_ID}&response_type=code&redirect_uri=${redirectUrl}&approval_prompt=force&scope=${scope}`;
+    };
 
     async function fetchData(data)
     {
@@ -33,19 +38,12 @@ export default function Login(props) {
 
     return (
         <div>
-            <OAuth2Login
-            authorizationUrl="https://www.strava.com/oauth/authorize"
-            responseType="code"
-            clientId="108420"
-            redirectUri="http://localhost:3000/hello"
-            onSuccess={onSuccess}
-            onFailure={onFailure}/>
             <TextField id="standard-basic" variant="standard" label="Username" onChange={(e) => setUsername(e.target.value)}/>
             <br></br>
             <TextField id="standard-basic" variant="standard" label="Password" onChange={(e) => setPassword(e.target.value)}/>
             <br></br>
             <br></br>
-            <button onClick={() => login()}>Fetch Test</button>
+            <button onClick={() => handleLogin()}>Fetch Test</button>
         </div>
     )
 }
