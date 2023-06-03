@@ -1,4 +1,5 @@
 from flask import Blueprint, request, jsonify
+from flask_cors import CORS, cross_origin
 import requests
 import json
 import swagger_client
@@ -20,6 +21,7 @@ payload = {
 strava_bp = Blueprint("strava", __name__)
 
 @strava_bp.route("/athlete", methods = ['GET'])
+@cross_origin()
 def get_athlete():
     if request.method == 'GET':
         # Configure OAuth2 access token for authorization: strava_oauth
@@ -31,6 +33,7 @@ def get_athlete():
         return api_response
     
 @strava_bp.route("/get_relavant_segments", methods = ['GET'])
+@cross_origin()
 def get_relavant_segments():
     if request.method == 'GET':
         bounding_width = json.loads(request.args.get("bounding_width"))
