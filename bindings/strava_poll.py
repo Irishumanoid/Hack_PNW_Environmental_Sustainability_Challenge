@@ -18,20 +18,14 @@ strava_bp = Blueprint("strava", __name__)
 @cross_origin()
 def get_athlete():
     if request.method == 'GET':
-        # Configure OAuth2 access token for authorization: strava_oauth
-        swagger_client.configuration.access_token = request.args.get("token")
-
-        # create an instance of the API class
-        api_instance = swagger_client.AthletesApi()
-        api_response = api_instance.get_logged_in_athlete()
-        return api_response
+        make_api_call("/athlete", request.args.get("token"))
     
 
 @strava_bp.route("/athlete/{id}/stats", methods = ['GET'])
 @cross_origin()
 def get_athlete_stats():
     if request.method == 'GET':
-        make_api_call(swagger_client.AthletesApi(), swagger_client.AthletesApi().get_athlete_stats())
+        make_api_call('athlete/{id}/stats', request.args.get('token'))
 
     
 @strava_bp.route("/get_relavant_segments", methods = ['GET'])
@@ -53,13 +47,7 @@ def get_relavant_segments():
         return jsonify(relavant_segments_cool)
 
 
-def make_api_call(api_inst, api_param):
-    api_instance = api_inst
-    try: 
-        api_response = api_param
-        pprint(api_response)
-        return api_response
-    except ApiException as e:
-        print("Exception when calling AthletesApi->getLoggedInAthlete: %s\n" % e)
+def make_api_call(path, token):
+    return requests.get("https://www.strava.com/api/v3/" + path, headers={"Authorization": "Bearer " + token}).json()
 
 
