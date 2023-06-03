@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import Landing from "./routes/Landing";
+import Login from './routes/Login';
 import {ThemeProvider} from "@mui/material/styles";
 import {CssBaseline, useMediaQuery} from "@mui/material";
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
     {
         path: "/hello",
         element: <Landing/>
+    },
+    {
+        path: "/login",
+        element: <Login/>
     }
 ])
 
