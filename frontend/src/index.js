@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import Landing from "./routes/Landing";
+import TrailData from './routes/TrailData';
 import {ThemeProvider} from "@mui/material/styles";
 import {CssBaseline, useMediaQuery} from "@mui/material";
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
@@ -10,8 +11,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const router = createBrowserRouter([
     {
-        path: "/hello",
+        path: "/landing",
         element: <Landing/>
+    },
+    {
+        path: "/traildata",
+        element: <TrailData/>
     }
 ])
 
