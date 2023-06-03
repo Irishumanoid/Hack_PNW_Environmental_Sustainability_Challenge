@@ -8,9 +8,9 @@ activites_url = "https://www.strava.com/api/v3/athlete/activities"
 explore_segments_url = "https://www.strava.com/api/v3/segments/explore"
 get_segment_url = "https://www.strava.com/api/v3/segments/"
 payload = {
-    'client_id': auth_consts.client_id,
-    'client_secret': auth_consts.client_secret,
-    'refresh_token': auth_consts.refresh_token,
+    'client_id': '108420',
+    'client_secret': 'c5fa6be66dd05a05457299416063ded1a329f835',
+    'refresh_token': 'f866f7ab7692ae8e615bd6466547e5fe4cefd7a6',
     'grant_type': "refresh_token",
     'f': 'json'
 }
@@ -27,7 +27,7 @@ def get_athlete():
         person_data = requests.get(activites_url, headers=header, params=param).json()
         return person_data
     
-@bp.route("/get_relavant_segments", methods = ['GET'])
+@strava_bp.route("/get_relavant_segments", methods = ['GET'])
 def get_relavant_segments():
     if request.method == 'GET':
         bounding_width = json.loads(request.args.get("bounding_width"))
