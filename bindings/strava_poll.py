@@ -9,13 +9,7 @@ auth_url = "https://www.strava.com/oauth/token"
 activites_url = "https://www.strava.com/api/v3/athlete/activities"
 explore_segments_url = "https://www.strava.com/api/v3/segments/explore"
 get_segment_url = "https://www.strava.com/api/v3/segments/"
-payload = {
-    'client_id': '108420',
-    'client_secret': 'c5fa6be66dd05a05457299416063ded1a329f835',
-    'refresh_token': 'f866f7ab7692ae8e615bd6466547e5fe4cefd7a6',
-    'grant_type': "refresh_token",
-    'f': 'json'
-}
+
 
 strava_bp = Blueprint("strava", __name__)
 
@@ -26,12 +20,13 @@ def get_athlete():
         swagger_client.configuration.access_token = request.args.get("token")
 
         # create an instance of the API class
-        api_instance = swagger_client.AthletesApi()
-        api_response = api_instance.get_logged_in_athlete()
-        return api_response
+        return make_api_call(swagger_client.AthletesApi(), swagger_client.AthletesApi().get_logged_in_athlete())
+        
+
+        
     
-@strava_bp.route("/get_relavant_segments", methods = ['GET'])
-def get_relavant_segments():
+@strava_bp.route("/athlete/activity", methods = ['GET'])
+def get_relevant_segments():
     if request.method == 'GET':
         bounding_width = json.loads(request.args.get("bounding_width"))
         bounding_center = json.loads(request.args.get("bounding_center"))
@@ -46,3 +41,15 @@ def get_relavant_segments():
             segment_cool = api_instance.getSegmentById(segment_id)
             relavant_segments_cool.append(segment_cool)
         return jsonify(relavant_segments_cool)
+
+
+def make_api_call(api_inst, api_param):
+    api_instance = api_inst
+    try: 
+        api_response = api_param
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling AthletesApi->getLoggedInAthlete: %s\n" % e)
+
+
+
