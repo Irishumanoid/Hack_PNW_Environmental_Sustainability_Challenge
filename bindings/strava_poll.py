@@ -20,7 +20,9 @@ def get_athlete():
         swagger_client.configuration.access_token = request.args.get("token")
 
         # create an instance of the API class
-        return make_api_call(swagger_client.AthletesApi(), swagger_client.AthletesApi().get_logged_in_athlete())
+        api_instance = swagger_client.AthletesApi()
+        api_response = api_instance.get_logged_in_athlete()
+        return api_response
         
 
         
@@ -41,6 +43,8 @@ def get_relevant_segments():
             segment_cool = api_instance.getSegmentById(segment_id)
             relavant_segments_cool.append(segment_cool)
         return jsonify(relavant_segments_cool)
+        pass
+        #make_api_call(swagger_client.AthletesApi(), swagger_client.AthletesApi().)
 
 
 def make_api_call(api_inst, api_param):
@@ -50,6 +54,5 @@ def make_api_call(api_inst, api_param):
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling AthletesApi->getLoggedInAthlete: %s\n" % e)
-
 
 
