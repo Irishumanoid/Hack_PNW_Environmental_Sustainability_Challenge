@@ -26,6 +26,14 @@ def get_athlete():
         api_response = api_instance.get_logged_in_athlete()
         return api_response
     
+
+@strava_bp.route("/athlete/{id}/stats", methods = ['GET'])
+@cross_origin()
+def get_athlete_stats():
+    if request.method == 'GET':
+        make_api_call(swagger_client.AthletesApi(), swagger_client.AthletesApi().get_athlete_stats())
+
+    
 @strava_bp.route("/get_relavant_segments", methods = ['GET'])
 @cross_origin()
 def get_relavant_segments():
@@ -43,8 +51,6 @@ def get_relavant_segments():
             segment_cool = api_instance.getSegmentById(segment_id)
             relavant_segments_cool.append(segment_cool)
         return jsonify(relavant_segments_cool)
-        pass
-        #make_api_call(swagger_client.AthletesApi(), swagger_client.AthletesApi().)
 
 
 def make_api_call(api_inst, api_param):
@@ -52,6 +58,7 @@ def make_api_call(api_inst, api_param):
     try: 
         api_response = api_param
         pprint(api_response)
+        return api_response
     except ApiException as e:
         print("Exception when calling AthletesApi->getLoggedInAthlete: %s\n" % e)
 
