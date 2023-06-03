@@ -11,7 +11,7 @@ api_instance = swagger_client.AthletesApi()
 
 try: 
     # Get Authenticated Athlete
-    api_response = api_instance.getLoggedInAthlete()
+    api_response = api_instance.get_logged_in_athlete()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AthletesApi->getLoggedInAthlete: %s\n" % e)
