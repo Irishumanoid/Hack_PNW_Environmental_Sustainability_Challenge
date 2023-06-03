@@ -1,4 +1,4 @@
-def distanceAlgorithm(dist, averageGrade, hazardous):
+def trailDifficultyAlgorithm(dist, averageGrade, hazardous):
     temp = dist * -.0002
     temp = -2 ** temp
     distForAlgorithm = temp + 1 #uses a logistics function to turn the distance into a value between zero and one (the function is -2^-.0002dist + 1)
