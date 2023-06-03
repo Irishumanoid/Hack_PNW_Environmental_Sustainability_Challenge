@@ -39,7 +39,7 @@ def get_athlete_stats():
 def get_relavant_segments():
     if request.method == 'GET':
         bounding_width = json.loads(request.args.get("bounding_width"))
-        bounding_center = json.loads(request.args.get("bounding_center"))
+        bounding_center = [json.loads(request.args.get("bounding_center_lat")), json.loads(request.args.get("bounding_center_long"))]
         #https://developers.strava.com/docs/reference/#api-Segments-exploreSegments:~:text=%5Bsouthwest%20corner%20latitutde%2C%20southwest%20corner%20longitude%2C%20northeast%20corner%20latitude%2C%20northeast%20corner%20longitude%5D
         bounding_rect = [bounding_center[0]-bounding_width/2, bounding_center[1]-bounding_width/2, bounding_center[0]+bounding_width/2, bounding_center[1]+bounding_width/2]
         api_instance = swagger_client.SegmentsApi()
