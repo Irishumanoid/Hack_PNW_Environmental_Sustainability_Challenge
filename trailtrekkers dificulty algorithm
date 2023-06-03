@@ -1,0 +1,19 @@
+def trailDifficultyAlgorithm(dist, averageGrade, hazardous):
+    temp = dist * -.0002
+    temp = -2 ** temp
+    distForAlgorithm = temp + 1 #uses a logistics function to turn the distance into a value between zero and one (the function is -2^-.0002dist + 1)
+
+    if hazardous:
+        hazNum = 1
+    else:
+        hazNum = 0
+    
+    distWeight = 1.0
+
+    gradeWeight = 2.0
+
+    hazardousWeight = 1.5
+
+    maxTotal = 4.5
+
+    return ((distWeight * distForAlgorithm) + (gradeWeight * averageGrade) + (hazardousWeight * hazNum)) / maxTotal
