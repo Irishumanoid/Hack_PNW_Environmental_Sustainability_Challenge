@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const router = createBrowserRouter([
     {
-        path: "/landing",
+        path: "/",
         element: <Landing/>
     },
     {
@@ -19,6 +19,7 @@ const router = createBrowserRouter([
         element: <TrailData/>
     }
 ])
+
 
 const SetThemeContext = React.createContext((theme) => {
 })
