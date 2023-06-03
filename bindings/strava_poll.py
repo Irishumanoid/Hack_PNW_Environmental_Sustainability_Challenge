@@ -1,21 +1,22 @@
 import flask
 from flask import Blueprint, request
 import requests
+import auth_consts
 
 auth_url = "https://www.strava.com/oauth/token"
 activites_url = "https://www.strava.com/api/v3/athlete/activities"
 
 payload = {
-    'client_id': "xxxx",
-    'client_secret': 'xxxx',
-    'refresh_token': 'xxxx',
+    'client_id': auth_consts.client_id,
+    'client_secret': auth_consts.client_secret,
+    'refresh_token': auth_consts.refresh_token,
     'grant_type': "refresh_token",
     'f': 'json'
 }
 
-bp = Blueprint("strava", __name__)
+strava_bp = Blueprint("strava", __name__)
 
-@bp.route("/athlete", methods = ['GET'])
+@strava_bp.route("/athlete", methods = ['GET'])
 def get_athlete():
     if request.method == 'GET':
         res = requests.post(auth_url, data=payload, verify=False)

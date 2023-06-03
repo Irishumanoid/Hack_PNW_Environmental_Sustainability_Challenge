@@ -1,9 +1,11 @@
 import json
 import flask
 from flask import Flask, jsonify
+import strava_poll
 
 
 app = Flask(__name__)
+app.register_blueprint(strava_poll.strava_bp)
 
 @app.route("/")
 def simple():
