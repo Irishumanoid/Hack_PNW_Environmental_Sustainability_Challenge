@@ -17,4 +17,7 @@ specific details:
 
 
 implementation details:
-1. flask web server; reference: https://tms-dev-blog.com/python-backend-with-javascript-frontend-how-to/
+ 1. flask web server; reference: https://tms-dev-blog.com/python-backend-with-javascript-frontend-how-to/
+ 2. frontend authenticates and sends user data to backend
+ 3. backend runs clustering algorithm and pulls data from Strava API to generate trail recommendations
+ 4. frontend gets recommendations from backend
