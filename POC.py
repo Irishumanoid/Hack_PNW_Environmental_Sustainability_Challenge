@@ -1,5 +1,5 @@
 import json
-import strava_poll
+import bindings.strava_poll as strava_poll
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 
