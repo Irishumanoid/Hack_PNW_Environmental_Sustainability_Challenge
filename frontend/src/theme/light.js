@@ -11,7 +11,8 @@ const theme = createTheme({
 
         text: {
             primary: "rgba(0,0,0,0.8)",
-            hover: "rgba(69,224,204,0.9)"
+            hover: "rgba(137,137,137,0.9)",
+            borderHover: "rgba(252,82,0,255)"
         },
     }
 })
