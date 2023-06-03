@@ -1,15 +1,17 @@
 
 
 export default function Landing(props) {
-    const queryParameters = new URLSearchParams(window.location.search);
-    const code = queryParameters.get("code");
-    console.log(code);
+    const REACT_APP_CLIENT_ID  = 108420;
+    const redirectUrl = "http://localhost:3000/traildata";
+    const scope = "read"
+
+    const handleLogin = () => {
+        window.location = `http://www.strava.com/oauth/authorize?client_id=${REACT_APP_CLIENT_ID}&response_type=code&redirect_uri=${redirectUrl}&approval_prompt=force&scope=${scope}`;
+    };
 
     return (
         <div>
-            <h1>
-                Hello!
-            </h1>
+            <button onClick={handleLogin}>Login</button>
         </div>
     )
 }
