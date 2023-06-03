@@ -1,0 +1,36 @@
+def playerSkillAlgorithm (recentRunCount, recentRideCount, recentRunDistance, recentRideDistance, recentRunElevation, recentRideElevation):
+    #basline values recentRunCount 16, recentRideCount 2, recentRunDistance 168, recentRideDistance 36, recentRunElevation 270, recentRideElevation 110
+    temp = recentRunCount * -.065
+    temp = -2 ** temp
+    recentRunCountForAlgorithm = temp + 1 #uses a logistics function to turn the distance into a value between zero and one
+
+    temp = recentRideCount * -.5
+    temp = -2 ** temp
+    recentRideCountForAlgorithm = temp + 1
+    
+    temp = recentRunDistance * -.005
+    temp = -2 ** temp
+    recentRunDistanceForAlgorithm = temp + 1
+
+    temp = recentRideDistance * -.03
+    temp = -2 ** temp
+    recentRideDistanceForAlgorithm = temp + 1
+
+    temp = recentRunElevation * -.004
+    temp = -2 ** temp
+    recentRunElevatioForAlgorithm = temp + 1
+
+    temp = recentRideElevation * -.01
+    temp = -2 ** temp
+    recentRideElevationForAlgorithm = temp + 1
+
+    recentRunCountWeight = 3
+    recentRideCountWeight = 1.5
+    recentRunDistanceWeight = 2.5
+    recentRideDistanceWeight = 1.2
+    recentRunElevationWeight = 2
+    recentRideElevationWeight = 1.05
+
+    maxPossibleTotal = 11.25
+
+    return ((recentRunCountWeight * recentRunCountForAlgorithm) + (recentRideCountWeight * recentRideCountForAlgorithm) + (recentRunDistanceWeight * recentRunDistanceForAlgorithm) + (recentRideDistanceWeight * recentRideDistanceForAlgorithm) + (recentRunElevationWeight * recentRunElevatioForAlgorithm) + (recentRideElevationWeight * recentRideElevationForAlgorithm)) / maxPossibleTotal
