@@ -17,4 +17,4 @@ specific details:
 
 
 implementation details:
-1. flask web server to integrate python
+1. flask web server; reference: https://tms-dev-blog.com/python-backend-with-javascript-frontend-how-to/
