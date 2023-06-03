@@ -1,18 +1,4 @@
-import time
-import swagger_client
-from swagger_client.rest import ApiException
+import requests
 from pprint import pprint
 
-# Configure OAuth2 access token for authorization: strava_oauth
-swagger_client.configuration.access_token = 'f866f7ab7692ae8e615bd6466547e5fe4cefd7a6'
-
-# create an instance of the API class
-api_instance = swagger_client.AthletesApi()
-
-try: 
-    # Get Authenticated Athlete
-    api_response = api_instance.get_logged_in_athlete()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AthletesApi->getLoggedInAthlete: %s\n" % e)
-
+pprint(requests.get("https://www.strava.com/api/v3/athlete", headers={"Authorization": "Bearer f866f7ab7692ae8e615bd6466547e5fe4cefd7a6"}).json())
