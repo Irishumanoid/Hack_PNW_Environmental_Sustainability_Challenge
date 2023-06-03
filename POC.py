@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def simple():
-    return 'test hello crystal'
+    return 'test hello Iris'
 
 
 @app.route('/users', methods=["GET"])
