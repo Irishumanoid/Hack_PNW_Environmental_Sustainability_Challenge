@@ -32,10 +32,6 @@ def get_relavant_segments():
     if request.method == 'GET':
         bounding_width = json.loads(request.args.get("bounding_width"))
         bounding_center = [json.loads(request.args.get("bounding_center_lat")), json.loads(request.args.get("bounding_center_long"))]
-        #https://developers.strava.com/docs/reference/#api-Segments-exploreSegments:~:text=%5Bsouthwest%20corner%20latitutde%2C%20southwest%20corner%20longitude%2C%20northeast%20corner%20latitude%2C%20northeast%20corner%20longitude%5D
-        bounding_rect = [bounding_center[0]-bounding_width/2, bounding_center[1]-bounding_width/2, bounding_center[0]+bounding_width/2, bounding_center[1]+bounding_width/2]
-        bounds_string = "%f,%f,%f,%f" % (bounding_rect[0], bounding_rect[1], bounding_rect[2], bounding_rect[3])
-        relavant_segments = make_api_call("segments/explore?bounds="+bounds_string, request.args.get('token'))
         # relavant_segments_cool = []
         # if relavant_segments_lame != None:
         #     if relavant_segments_lame.get("segments") != None:
@@ -43,8 +39,14 @@ def get_relavant_segments():
         #             segment_id = segment.get("id")
         #             segment_cool = make_api_call("segments/"+str(segment_id), request.args.get('token'))
         #             relavant_segments_cool.append(segment_cool)
+        relavant_segments = get_relavant_segments_inner(bounding_width, bounding_center, request.args.get('token'))
         return "💀" + json.dumps(userify_data(relavant_segments.get("segments")))
 
+def get_relavant_segments_inner(bounding_width, bounding_center, token):
+    #https://developers.strava.com/docs/reference/#api-Segments-exploreSegments:~:text=%5Bsouthwest%20corner%20latitutde%2C%20southwest%20corner%20longitude%2C%20northeast%20corner%20latitude%2C%20northeast%20corner%20longitude%5D
+    bounding_rect = [bounding_center[0]-bounding_width/2, bounding_center[1]-bounding_width/2, bounding_center[0]+bounding_width/2, bounding_center[1]+bounding_width/2]
+    bounds_string = "%f,%f,%f,%f" % (bounding_rect[0], bounding_rect[1], bounding_rect[2], bounding_rect[3])
+    relavant_segments = make_api_call("segments/explore?bounds="+bounds_string, token)
 
 def userify_data(segments):
     new_segments = []
