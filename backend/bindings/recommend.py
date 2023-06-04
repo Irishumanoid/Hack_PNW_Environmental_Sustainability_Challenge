@@ -56,8 +56,6 @@ def get_user_score(user_routes) -> int:
 
 
 
-
-
 def get_single_route_difficulty():
     pass
 
