@@ -25,16 +25,13 @@ const SetThemeContext = React.createContext((theme) => {
 })
 
 root.render(
-    <React.StrictMode>
-        <RootApp/>
-    </React.StrictMode>
+    <RootApp/>
 );
 
 function RootApp(props) {
     const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
     const [theme, setTheme] = useState(light); // TODO, dark theme?
-
     return (
         <div>
             <SetThemeContext.Provider value={(thisTheme) => {setTheme(thisTheme)}}>
@@ -43,6 +40,7 @@ function RootApp(props) {
                     <RouterProvider router={router}/>
                 </ThemeProvider>
             </SetThemeContext.Provider>
+
         </div>
     )
 }
