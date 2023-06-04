@@ -24,11 +24,11 @@ def get_athlete():
         return make_api_call("/athlete", request.args.get("token"))
     
 
-@strava_bp.route("/athlete/{id}/stats", methods = ['GET'])
+@strava_bp.route("/athlete/<id>/stats", methods = ['GET'])
 @cross_origin()
-def get_athlete_stats():
+def get_athlete_stats(id):
     if request.method == 'GET':
-        return make_api_call('athlete/{id}/stats', request.args.get('token'))
+        return make_api_call('athletes/%s/stats' % id, request.args.get('token'))
 
     
 @strava_bp.route("/get_relavant_segments", methods = ['GET'])
@@ -47,11 +47,12 @@ def get_relavant_segments():
                 segment_id = segment.get("id")
                 segment_cool = make_api_call("segments/"+str(segment_id), request.args.get('token'))
                 relavant_segments_cool.append(segment_cool)
-        print(str(relavant_segments_lame))
-        return str(relavant_segments_lame)
+        print(relavant_segments_lame)
+        return relavant_segments_lame
 
 
 def make_api_call(path, token):
+    print(path)
     return requests.get("https://www.strava.com/api/v3/" + path, headers={"Authorization": "Bearer " + token}).json()
 
 
