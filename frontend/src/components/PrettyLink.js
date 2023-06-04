@@ -8,17 +8,14 @@ export default function PrettyLink(props) {
 
     const [hover, setHover] = useState(false)
 
-    // const txtColor = hover ? theme.palette.text.hover : ;
-
     const style = deepmerge(props.sx == null ? {} : props.sx, {
         textDecorationLine: "none",
         color: theme.palette.text.primary,
-        // borderBottom: hover ? "3px solid " + theme.palette.text.borderHover : "none"
     })
 
     return <div style={{
-        borderBottom: hover ? "3px solid " + theme.palette.text.borderHover : "none"
-
+        borderBottom: hover ? "3px solid " + theme.palette.text.borderHover : "none",
+        transition: 'border-bottom 0.1s ease-in'
     }}> <Link
         to={props.to}
         style={style}

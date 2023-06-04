@@ -6,7 +6,8 @@ const theme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#ffffff',
+            main: '#FCF5F4',
+            header: "rgb(255,255,255)"
         },
 
         text: {
