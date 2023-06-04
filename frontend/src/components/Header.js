@@ -1,22 +1,24 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import {Link} from "react-router-dom";
+
 import PrettyLink from "./PrettyLink"
 import Stack from '@mui/material/Stack';
-import {makeStyles} from "@mui/material";
-import Grid from '@mui/material/Unstable_Grid2';
 
 
 function Header() {
+
+    const REACT_APP_CLIENT_ID  = 108420;
+    const redirectUrl = "http://localhost:3000/traildata";
+    const scope = "read"
+
+    const handleLogin = () => {
+        window.location = `http://www.strava.com/oauth/authorize?client_id=${REACT_APP_CLIENT_ID}&response_type=code&redirect_uri=${redirectUrl}&approval_prompt=force&scope=${scope}`;
+    };
+
+
     return (
         <Box sx={{flexGrow: 1}}>
-            <Stack direction="row" sx={{margin: "10px"}}>
+            <Stack direction="row" sx={{margin: "10px", borderBottom: "1px solid grey"}}>
                 <Box sx={{margin: "auto 40vw auto 5vw"}}>
                     <h1>
                         Trail Trecker
