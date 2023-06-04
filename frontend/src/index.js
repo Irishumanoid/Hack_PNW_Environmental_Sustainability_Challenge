@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Landing from "./routes/Landing";
-import TrailData from './routes/TrailData';
 import {ThemeProvider} from "@mui/material/styles";
 import {CssBaseline, useMediaQuery} from "@mui/material";
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import light from "./theme/light";
+import TrailApp from "./routes/TrailApp";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,9 +15,9 @@ const router = createBrowserRouter([
         element: <Landing/>
     },
     {
-        path: "/traildata",
-        element: <TrailData/>
-    }
+        path: "/app",
+        element: <TrailApp/>
+    },
 ])
 
 
@@ -44,4 +44,3 @@ function RootApp(props) {
         </div>
     )
 }
-
