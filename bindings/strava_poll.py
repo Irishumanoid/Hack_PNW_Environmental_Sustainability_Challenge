@@ -39,17 +39,20 @@ def get_relavant_segments():
         bounding_center = [json.loads(request.args.get("bounding_center_lat")), json.loads(request.args.get("bounding_center_long"))]
         #https://developers.strava.com/docs/reference/#api-Segments-exploreSegments:~:text=%5Bsouthwest%20corner%20latitutde%2C%20southwest%20corner%20longitude%2C%20northeast%20corner%20latitude%2C%20northeast%20corner%20longitude%5D
         bounding_rect = [bounding_center[0]-bounding_width/2, bounding_center[1]-bounding_width/2, bounding_center[0]+bounding_width/2, bounding_center[1]+bounding_width/2]
-        relavant_segments_lame = make_api_call("segments/explore?bounds=%f,%f,%f,%f" % (bounding_rect[0], bounding_rect[1], bounding_rect[2], bounding_rect[3]), request.args.get('token'))
+        bounds_string = "%f,%f,%f,%f" % (bounding_rect[0], bounding_rect[1], bounding_rect[2], bounding_rect[3])
+        relavant_segments_lame = make_api_call("segments/explore?bounds="+bounds_string, request.args.get('token'))
         relavant_segments_cool = []
-        pprint(relavant_segments_lame)
-        for segment in relavant_segments_lame.get("segments"):
-            segment_id = segment.id
-            segment_cool = make_api_call("segments/"+segment_id, request.args.get('token'))
-            relavant_segments_cool.append(segment_cool)
-        return jsonify(relavant_segments_cool)
+        if relavant_segments_lame != None:
+            for segment in relavant_segments_lame.get("segments"):
+                segment_id = segment.get("id")
+                segment_cool = make_api_call("segments/"+str(segment_id), request.args.get('token'))
+                relavant_segments_cool.append(segment_cool)
+        print(str(relavant_segments_lame))
+        return str(relavant_segments_lame)
 
 
 def make_api_call(path, token):
     return requests.get("https://www.strava.com/api/v3/" + path, headers={"Authorization": "Bearer " + token}).json()
 
 
+#http://chrissytopher.com:5000/get_relavant_segments?token=f866f7ab7692ae8e615bd6466547e5fe4cefd7a6&bounding_width=10.0&bounding_center_lat=47.620832&bounding_center_long=122.337382
