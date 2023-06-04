@@ -21,7 +21,7 @@ def vals_to_list(file):
         run = {}
         run['distance'] = raw.get('distance')
         run['moving_time'] = raw.get('moving_time')
-        run['elev_difference'] = raw.get('elev_difference')
+        run['total_elevation_gain'] = raw.get('total_elevation_gain')
         runs.append(run)
     return runs
 
@@ -33,18 +33,16 @@ def get_user_score(user_routes) -> int:
 
     distances = []
     for route in user_routes:
-        distances.append(route['distance'])
+            distances.append(route['distance'])
     
-    #convert to integer from string
-    # for i in distances:
-    #     distances[i] = eval(distances[i])
+    distances = [eval(i) for i in distances] #convert to integer from string
 
     mean = np.mean(distances)
     stdev = np.std(distances)
     
     for route in distances:
-        if route > mean - 3*stdev and route < mean - 3*stdev:
-            diff = (route-np.min(distances))/(np.max(route)-np.min(route))
+        if route['distance'] > mean - 3*stdev and route['distance'] < mean - 3*stdev:
+            diff = (route['distance']-np.min(distances))/(np.max(route['distance'])-np.min(route['distance']))
         else: 
             diff = 0
         difficulty[route] = diff
@@ -57,7 +55,7 @@ def get_user_score(user_routes) -> int:
 
 
 def get_single_route_difficulty(route):
-    dist, elevation_gain = float(route["distance"]), float(route["elev_difference"])
+    dist, elevation_gain = float(route["distance"]), float(route["total_elevation_gain"])
     min_d, max_d, min_e, max_e = 0.5, 26.2, 10, 500
     difficulty = np.sqrt((dist-min_d)/(max_d-min_d)**2+(elevation_gain-min_e)/(max_e-min_e)**2)
     return difficulty
