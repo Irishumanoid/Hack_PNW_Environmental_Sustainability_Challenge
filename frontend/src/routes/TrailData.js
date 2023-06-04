@@ -1,6 +1,5 @@
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
 import HeaderTrailData from "../components/HeaderTrailData.js"
-import { Map, Marker } from "pigeon-maps"
 import React from "react";
 
 export default class TrailData extends React.Component {
@@ -105,6 +104,8 @@ async function fetchData(data) {
 }
 
 async function getData(bounding_width, bounding_center_lat, bounding_center_long) {
-    let response = await fetch(`http://chrissytopher.com:5000/get_relavant_segments?bounding_width=${bounding_width}&bounding_center_lat=${bounding_center_lat}&bounding_center_long=${bounding_center_long}&token=e8fe3d9de248c16768a85a2d7343664057742ba7`, { mode: 'no-cors' });
-    return response.json()
+    let response = await fetch(`http://chrissytopher.com:5000/get_relavant_segments?bounding_width=${bounding_width}&bounding_center_lat=${bounding_center_lat}&bounding_center_long=${bounding_center_long}&token=e8fe3d9de248c16768a85a2d7343664057742ba7`);
+    let json = (await response.text()).substring(2);
+    console.log(json);
+    return JSON.parse(json);
 }
