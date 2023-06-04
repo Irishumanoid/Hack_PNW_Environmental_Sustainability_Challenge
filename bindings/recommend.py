@@ -1,5 +1,5 @@
 import json
-import bindings.strava_poll as sp
+import strava_poll as sp
 from flask import Blueprint, request, Response
 from flask_cors import cross_origin
 
@@ -8,12 +8,13 @@ post_bp = Blueprint("suggestions", __name__)
 
 
 def json_to_list(file, key:str) -> list[str]:
-    data_map = json.loads(file)
-    values = []
-    for entry in len(data_map):
-        values.append(entry[key])
+    data_map = ""
+    with open(file, 'r') as f:
+        data_map = json.loads(f.read())
+    return data_map[key]
 
-    return values
+
+print(json_to_list("bindings/dummy_data.json", "biggest_ride_distance"))
 
 
 def suggest_route(routes:list[str], param:str) -> list[str]:

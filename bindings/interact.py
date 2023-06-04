@@ -1,14 +1,9 @@
-import os
 import requests
 import urllib3
 import pandas as pd
 import numpy as np
-import time
 import matplotlib.pyplot as plt
-import folium
-import polyline
-import base64
-from tqdm import tqdm# disable warnings
+from tqdm import tqdm # disable warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import json
 import auth_consts
@@ -23,7 +18,6 @@ def get_access_token(client_id, client_secret, refresh_token):
     payload = {
     'client_id': auth_consts.client_id,
     'client_secret': auth_consts.client_secret,
-    'code': auth_consts.auth_code,
     'refresh_token': auth_consts.refresh_token,
     'grant_type': "refresh_token",
     'f': 'json'
@@ -31,17 +25,18 @@ def get_access_token(client_id, client_secret, refresh_token):
     
     #generate new access token
     req = requests.post(url=oauth_url, data=payload, verify=False)
-    access_token = req.json()['access_token']
-    print("Access Token = {}\n".format(str(access_token)))
+    #access_token = req.json()['access_token']
+    #print("Access Token = {}\n".format(str(req.json()['access_token'])))
+    print(auth_consts.access_token)
 
-    return access_token
+    return auth_consts.access_token
 
 access_token = get_access_token(client_id, client_secret, refresh_token)
 
 
 def get_data(access_token, per_page=200, page=1):
      
-   activities_url = 'https://www.strava.com/api/v3/athlete/activities'
+   activities_url = 'https://www.strava.com/api/v3/athlete/activities/{auth_consts.user_id}/stats'
    headers = {'Authorization': 'Bearer ' + access_token}
    params = {'per_page': per_page, 'page': page}
    
@@ -66,7 +61,8 @@ for i in data:
     not_null_data.extend(i)
 
 
-#print(pd.json_normalize(not_null_data))
+print(pd.json_normalize(not_null_data))
+
     
 
 
