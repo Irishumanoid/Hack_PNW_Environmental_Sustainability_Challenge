@@ -1,5 +1,5 @@
 import json
-import strava_poll as sp
+import bindings.strava_poll as sp
 from flask import Blueprint, request, Response
 from flask_cors import cross_origin
 import numpy as np
@@ -21,7 +21,7 @@ def vals_to_list(file):
         run = {}
         run['distance'] = raw.get('distance')
         run['moving_time'] = raw.get('moving_time')
-        run['total_elevation_gain'] = raw.get('total_elevation_gain')
+        run['elev_difference'] = raw.get('elev_difference')
         runs.append(run)
     return runs
 
@@ -33,17 +33,18 @@ def get_user_score(user_routes) -> int:
 
     distances = []
     for route in user_routes:
-        if route == 'distance':
-            distances.append(route['distance'])
+        distances.append(route['distance'])
     
-    distances = [eval(i) for i in distances] #convert to integer from string
+    #convert to integer from string
+    # for i in distances:
+    #     distances[i] = eval(distances[i])
 
     mean = np.mean(distances)
     stdev = np.std(distances)
     
     for route in distances:
-        if route['distance'] > mean - 3*stdev and route['distance'] < mean - 3*stdev:
-            diff = (route['distance']-np.min(distances))/(np.max(route['distance'])-np.min(route['distance']))
+        if route > mean - 3*stdev and route < mean - 3*stdev:
+            diff = (route-np.min(distances))/(np.max(route)-np.min(route))
         else: 
             diff = 0
         difficulty[route] = diff
@@ -55,9 +56,11 @@ def get_user_score(user_routes) -> int:
     return np.mean(rank_list)
 
 
-
-def get_single_route_difficulty():
-    pass
+def get_single_route_difficulty(route):
+    dist, elevation_gain = float(route["distance"]), float(route["elev_difference"])
+    min_d, max_d, min_e, max_e = 0.5, 26.2, 10, 500
+    difficulty = np.sqrt((dist-min_d)/(max_d-min_d)**2+(elevation_gain-min_e)/(max_e-min_e)**2)
+    return difficulty
 
 
 @post_bp.route("/get_suggestions", methods = ['PUT'])
