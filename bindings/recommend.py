@@ -2,6 +2,7 @@ import json
 import strava_poll as sp
 from flask import Blueprint, request, Response
 from flask_cors import cross_origin
+import numpy as np
 
 
 post_bp = Blueprint("suggestions", __name__)
@@ -27,18 +28,29 @@ def vals_to_list(file):
 print(json.dumps(vals_to_list(open("bindings/activity_data.json").read())))
 
 
-def suggest_route(routes:list[str], param:str) -> list[str]:
-    distances = []
-    for run in routes.keys():
-        if run == param:
-            distances.append(run[param])
-    
-    min_len, max_len = min(routes), max(routes)
-    possible = json_to_val(sp.get_relevant_segments_inner())
+def get_route_score(user_routes) -> list[str]:
+    difficulty = {}
 
-    valid = [i for i, entry in possible if (entry[param] > min_len and entry[param] < max_len)]
-    request.data += valid
-    return request.data
+    distances = []
+    for route in user_routes:
+        for run in route.keys():
+            if run == 'distance':
+                distances.append(run['distance'])
+    
+    mean = np.mean(distances)
+    stdev = np.std(distances)
+    
+    for route in user_routes:
+        if route['distance'] > mean - 3*stdev and route['distance'] < mean - 3*stdev:
+            diff = (route['distance']-np.min(distances))/(np.max(route['distance'])-np.min(route['distance']))
+        else: 
+            diff = 0
+        difficulty[route] = diff
+
+
+def rank_routes(routes):
+    sp.get_relavant_segments_inner()
+
 
 
 
