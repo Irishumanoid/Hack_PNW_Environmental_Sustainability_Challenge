@@ -36,18 +36,18 @@ def get_relavant_segments():
         bounding_rect = [bounding_center[0]-bounding_width/2, bounding_center[1]-bounding_width/2, bounding_center[0]+bounding_width/2, bounding_center[1]+bounding_width/2]
         bounds_string = "%f,%f,%f,%f" % (bounding_rect[0], bounding_rect[1], bounding_rect[2], bounding_rect[3])
         relavant_segments_lame = make_api_call("segments/explore?bounds="+bounds_string, request.args.get('token'))
-        relavant_segments_cool = []
-        if relavant_segments_lame != None:
-            for segment in relavant_segments_lame.get("segments"):
-                segment_id = segment.get("id")
-                segment_cool = make_api_call("segments/"+str(segment_id), request.args.get('token'))
-                relavant_segments_cool.append(segment_cool)
-        print(json.dumps(relavant_segments_cool))
-        return json.dumps(relavant_segments_cool)
+        # relavant_segments_cool = []
+        # if relavant_segments_lame != None:
+        #     if relavant_segments_lame.get("segments") != None:
+        #         for segment in relavant_segments_lame.get("segments"):
+        #             segment_id = segment.get("id")
+        #             segment_cool = make_api_call("segments/"+str(segment_id), request.args.get('token'))
+        #             relavant_segments_cool.append(segment_cool)
+        return "💀" + json.dumps(relavant_segments_lame)
 
 
 def make_api_call(path, token):
     return requests.get("https://www.strava.com/api/v3/" + path, headers={"Authorization": "Bearer " + token}).json()
 
 
-#http://chrissytopher.com:5000/get_relavant_segments?token=f866f7ab7692ae8e615bd6466547e5fe4cefd7a6&bounding_width=10.0&bounding_center_lat=47.620832&bounding_center_long=122.337382
+#http://chrissytopher.com:5000/get_relavant_segments?token=8bd45d30c1c9e802f7f81a76d24245747dc474eb&bounding_width=10.0&bounding_center_lat=47.620832&bounding_center_long=122.337382
