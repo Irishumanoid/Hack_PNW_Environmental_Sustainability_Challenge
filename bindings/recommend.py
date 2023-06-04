@@ -1,5 +1,5 @@
 import json
-import strava_poll as sp
+import bindings.strava_poll as sp
 from flask import Blueprint, request, Response
 from flask_cors import cross_origin
 import numpy as np
@@ -56,10 +56,6 @@ def get_user_score(user_routes) -> int:
 
 
 
-
-
-def get_single_route_difficulty():
-    pass
 
 
 @post_bp.route("/get_suggestions", methods = ['PUT'])
