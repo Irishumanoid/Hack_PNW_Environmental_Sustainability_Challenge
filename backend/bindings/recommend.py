@@ -55,9 +55,6 @@ def get_user_score(user_routes) -> int:
     return np.mean(rank_list)
 
 
-
-
-
 @post_bp.route("/get_suggestions", methods = ['PUT'])
 @cross_origin()
 def possible_routes():
