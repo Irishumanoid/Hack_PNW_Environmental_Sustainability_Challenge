@@ -2,14 +2,12 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PrettyLink from "../components/PrettyLink";
 import * as React from "react";
-import ImageCarousel from "../components/ImageCarousel";
 import Typography from "@mui/material/Typography";
-import {ImageList, ImageListItem, useMediaQuery, useTheme} from "@mui/material";
+import {useMediaQuery, useTheme} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 
-export default function Landing(props) {
-
+export default function Landing() {
     const REACT_APP_CLIENT_ID = 108420;
     const redirectUrl = "http://localhost:3000/app";
     const scope = "read"
@@ -91,7 +89,6 @@ export function LandingImageSection(props) {
                 {itemData.map((item, index) => (<Grid key={index} item>
                     <LandingImageSlide src={item.img}/>
                 </Grid>))}
-                {/*</Grid>*/}
             </Grid>}
         </Box>
     );
@@ -103,20 +100,10 @@ const itemData = [{
     img: '/carousel/2017-moonlighthosmer-mikekristywestby-01.jpg', title: 'Kitchen',
 }, {
     img: '/carousel/a9d4eda607c79d18064f9e172269f1ad--lake-ohara-canada-beautiful-park.jpg', title: 'Sink',
-}, {
-    img: '/carousel/download.jpg', title: 'Books',
-}, {
+},  {
     img: '/carousel/loch-eil-and-ben-nevis-royalty-free-image-1613726428_.jpg', title: 'Chairs',
 }, {
     img: '/carousel/merlin_59275027.jpg', title: 'Candle',
 }, {
     img: '/carousel/open-canoeing-on-lake-windermere.jpg', title: 'Laptop',
-}, {
-    img: '/carousel/The-Benefits-of-Exercising-Outdoors-Fitness-Nation-901x601.jpg', title: 'Doors',
-}, {
-    img: '/carousel/the-benefits-of-outdoor-exercise-722x406.jpg', title: 'Coffee',
-}, {
-    img: '/carousel/unnamed(1).png', title: 'Storage',
-}, {
-    img: '/carousel/unnamed.jpg', title: 'Coffee table',
 },];

@@ -44,4 +44,3 @@ function RootApp(props) {
         </div>
     )
 }
-

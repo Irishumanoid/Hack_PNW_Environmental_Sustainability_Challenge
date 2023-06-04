@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import {Divider, useTheme} from "@mui/material";
+import {Divider, useMediaQuery, useTheme} from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
@@ -13,11 +13,8 @@ export default function Footer(props) {
         backgroundColor: theme.palette.footer.main,
         color: theme.palette.footer.text
     }}>
-        <Stack direction="row" spacing={2} >
-            <Typography sx={{margin: "0 5px"}}>
-                2023 PNW Hackathon. Developed by:
-
-            </Typography>
+        <Stack direction={{ sm: 'column', md: 'row' }} spacing={2} >
+            <Typography sx={{margin: "0 5px"}}>2023 PNW Hackathon. Developed by:</Typography>
             <Stack
                 direction="row"
                 divider={<Divider orientation="vertical" flexItem/>}

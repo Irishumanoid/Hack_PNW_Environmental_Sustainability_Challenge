@@ -23,7 +23,10 @@ function Header(props) {
             <Stack direction="row" sx={{margin: "10px"}}>
                 <Box sx={{margin: "auto auto auto 5vw"}}>
                     <h2>
-                        Trail Trekker
+                        <PrettyLink to={"/"}>
+                            Trail Trekker
+
+                        </PrettyLink>
                     </h2>
                 </Box>
                 <Box sx={{margin: "auto 5vw auto 0", display: "flex",}}>
