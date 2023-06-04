@@ -1,18 +1,13 @@
 from flask import Blueprint, request, jsonify
-from flask_cors import CORS, cross_origin
+from flask_cors import cross_origin
 import requests
 import json
-import swagger_client
-from swagger_client.rest import ApiException
 from pprint import pprint
 
 auth_url = "https://www.strava.com/oauth/token"
 activites_url = "https://www.strava.com/api/v3/athlete/activities"
 explore_segments_url = "https://www.strava.com/api/v3/segments/explore"
 get_segment_url = "https://www.strava.com/api/v3/segments/"
-
-swagger_client.configuration.access_token = 'f866f7ab7692ae8e615bd6466547e5fe4cefd7a6'
-athlete_instance = swagger_client.AthletesApi()
 
 
 strava_bp = Blueprint("strava", __name__)

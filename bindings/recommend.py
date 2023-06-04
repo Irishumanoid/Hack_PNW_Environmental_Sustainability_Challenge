@@ -18,10 +18,10 @@ def json_to_list(file, key:str) -> list[str]:
 
 def suggest_route(routes:list[str], param:str) -> list[str]:
     min_len, max_len = min(routes), max(routes)
-    possible_routes = json_to_list(sp.get_relevant_segments())
+    possible = json_to_list(sp.get_relevant_segments())
 
-    valid_routes = [i for i, entry in possible_routes if (entry[param] > min_len and entry[param] < max_len)]
-    request.data += valid_routes
+    valid = [i for i, entry in possible if (entry[param] > min_len and entry[param] < max_len)]
+    request.data += valid
 
 
 
