@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Landing from "./routes/Landing";
 import TrailData from './routes/TrailData';
+import TestingMap from './routes/TestingMap';
 import {ThemeProvider} from "@mui/material/styles";
 import {CssBaseline, useMediaQuery} from "@mui/material";
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     {
         path: "/traildata",
         element: <TrailData/>
+    },
+    {
+        path: "/map",
+        element: <TestingMap/>
     }
 ])
 
