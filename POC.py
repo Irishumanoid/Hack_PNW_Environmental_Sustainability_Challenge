@@ -1,10 +1,11 @@
 import json
-import bindings.strava_poll as strava_poll
+from bindings import clustering, strava_poll
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 app.register_blueprint(strava_poll.strava_bp)
+app.register_blueprint(clustering.post_bp)
 
 @app.route("/")
 def simple():
