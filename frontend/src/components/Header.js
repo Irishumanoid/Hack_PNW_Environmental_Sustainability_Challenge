@@ -16,19 +16,18 @@ import Grid from '@mui/material/Unstable_Grid2';
 function Header(props) {
     const theme = useTheme()
 
-
     return (
         <Box sx={{
             flexGrow: 1,
             backgroundColor: theme.palette.primary.header
         }}>
             <Stack direction="row" sx={{margin: "10px"}}>
-                <Box sx={{margin: "auto 40vw auto 5vw"}}>
+                <Box sx={{margin: "auto auto auto 5vw"}}>
                     <h2>
                         Trail Trekker
                     </h2>
                 </Box>
-                <Box sx={{margin: "auto 0 auto 0", display: "flex",}}>
+                <Box sx={{margin: "auto 5vw auto 0", display: "flex",}}>
                     {props.children}
                 </Box>
             </Stack>

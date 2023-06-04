@@ -6,8 +6,9 @@ import 'leaflet/dist/leaflet.css';
 
 export default class TrailData extends React.Component {
     
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
+        this.state = {data: []};
     }
 
     async componentDidMount() {
@@ -28,11 +29,15 @@ export default class TrailData extends React.Component {
             layers: [MAP_TILE],
         };
         const map = L.map('map', mapParams);
-        //console.log(await getData(1, 47.6062, -122.3321));
+        const trailData2 = await getData(1, 47.6062, -122.3321);
+        console.log(trailData2);
+        this.setState({data: trailData2});
         //this.setState({...this.state, data: getData(1, 47.6062, -122.3321)})
     }
 
     render() {
+        
+
         const queryParameters = new URLSearchParams(window.location.search);
         const code = queryParameters.get("code");
         if (code == null)
@@ -50,7 +55,7 @@ export default class TrailData extends React.Component {
           };
 
 
-        fetchData({user_code: code});
+        //fetchData({user_code: code});
 
         const testTrailData = [{
             "id": 229781,
@@ -550,7 +555,7 @@ export default class TrailData extends React.Component {
         
 
         
-        
+        console.log(this.state.data[0]);
 
         return (
             <div>
@@ -559,7 +564,7 @@ export default class TrailData extends React.Component {
                     Hikes For You
                 </h1>
                 <div style={{"display": "inline-block", float:"left", width:"40%", "marginRight":"10%", margin: "1%", overflow: "auto", height:"1000px"}}>
-                    {testTrailData.map((item) => (
+                    {this.state.data.map((item) => (
                         <Accordion>
                             <AccordionSummary>
                                 <Typography>
@@ -571,9 +576,9 @@ export default class TrailData extends React.Component {
                                     Distance: {item.distance}
                                 </Typography>
                                 <Typography>
-                                    Average Grade: {item.average_grade}
+                                    Elevation: {item.elevation}
                                 </Typography>
-                                <a href={`https://maps.google.com/?q=${item.start_latlng[0]},${item.start_latlng[1]}`}>
+                                <a href={`https://maps.google.com/?q=${item.start_location[0]},${item.start_location[1]}`}>
                                     Google Maps
                                 </a>
                             </AccordionDetails>
@@ -604,6 +609,8 @@ async function fetchData(data) {
 }
 
 async function getData(bounding_width, bounding_center_lat, bounding_center_long) {
-    let response = await fetch(`http://chrissytopher.com:5000/get_relavant_segments?bounding_width=${bounding_width}&bounding_center_lat=${bounding_center_lat}&bounding_center_long=${bounding_center_long}&token=e8fe3d9de248c16768a85a2d7343664057742ba7`, { mode: 'no-cors' });
-    return response.json()
+    let response = await fetch(`http://chrissytopher.com:5000/get_relavant_segments?bounding_width=${bounding_width}&bounding_center_lat=${bounding_center_lat}&bounding_center_long=${bounding_center_long}&token=8bd45d30c1c9e802f7f81a76d24245747dc474eb`);
+    let json = (await response.text()).substring(2);
+    //console.log(json);
+    return JSON.parse(json);
 }
