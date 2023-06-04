@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import {useTheme} from "@mui/material";
-import {useState} from "react";
+import React, { useState } from 'react';
 import {deepmerge} from "@mui/utils";
 
 export default function PrettyLink(props) {
