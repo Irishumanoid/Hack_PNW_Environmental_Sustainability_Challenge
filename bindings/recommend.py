@@ -25,33 +25,41 @@ def vals_to_list(file):
         runs.append(run)
     return runs
 
-print(json.dumps(vals_to_list(open("bindings/activity_data.json").read())))
+#print(json.dumps(vals_to_list(open("bindings/activity_data.json").read())))
 
 
-def get_route_score(user_routes) -> list[str]:
+def get_user_score(user_routes) -> int:
     difficulty = {}
 
     distances = []
     for route in user_routes:
-        for run in route.keys():
-            if run == 'distance':
-                distances.append(run['distance'])
+        if route == 'distance':
+            distances.append(route['distance'])
     
+    distances = [eval(i) for i in distances] #convert to integer from string
+
     mean = np.mean(distances)
     stdev = np.std(distances)
     
-    for route in user_routes:
+    for route in distances:
         if route['distance'] > mean - 3*stdev and route['distance'] < mean - 3*stdev:
             diff = (route['distance']-np.min(distances))/(np.max(route['distance'])-np.min(route['distance']))
         else: 
             diff = 0
         difficulty[route] = diff
 
+    rank_list = []
+    for entry in difficulty.values():
+        rank_list.append(entry)
 
-def rank_routes(routes):
-    sp.get_relavant_segments_inner()
+    return np.mean(rank_list)
 
 
+
+
+
+def get_single_route_difficulty():
+    pass
 
 
 @post_bp.route("/get_suggestions", methods = ['PUT'])
