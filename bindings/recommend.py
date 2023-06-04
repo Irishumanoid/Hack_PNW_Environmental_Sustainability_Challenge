@@ -13,8 +13,19 @@ def json_to_list(file, key:str) -> list[str]:
         data_map = json.loads(f.read())
     return data_map[key]
 
+def parse_user(user_json): 
+    raw_json = json.loads(user_json)
+    runs = []
+    for raw_run in raw_json:
+        run = {}
+        run["distance"] = raw_run.get("distance")
+        run["moving_time"] = raw_run.get("moving_time")
+        run["total_elevation_gain"] = raw_run.get("total_elevation_gain")
+        runs.append(run)
+    return runs
 
-print(json_to_list("bindings/dummy_data.json", "biggest_ride_distance"))
+print(json.dumps(parse_user(open("bindings/activity_data.json").read())))
+# print(json_to_list("bindings/dummy_data.json", "biggest_ride_distance"))
 
 
 def suggest_route(routes:list[str], param:str) -> list[str]:
