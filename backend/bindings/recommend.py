@@ -56,8 +56,11 @@ def get_user_score(user_routes) -> int:
 
 
 
-def get_single_route_difficulty():
-    pass
+def get_single_route_difficulty(route):
+    dist, elevation_gain = float(route["distance"]), float(route["total_elevation_gain"])
+    min_d, max_d, min_e, max_e = 0.5, 26.2, 10, 500
+    difficulty = np.sqrt((dist-min_d)/(max_d-min_d)**2+(elevation_gain-min_e)/(max_e-min_e)**2)
+    return difficulty
 
 
 @post_bp.route("/get_suggestions", methods = ['PUT'])
