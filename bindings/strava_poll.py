@@ -42,12 +42,11 @@ def get_relavant_segments():
                 segment_id = segment.get("id")
                 segment_cool = make_api_call("segments/"+str(segment_id), request.args.get('token'))
                 relavant_segments_cool.append(segment_cool)
-        print(relavant_segments_lame)
-        return relavant_segments_lame
+        print(json.dumps(relavant_segments_cool))
+        return json.dumps(relavant_segments_cool)
 
 
 def make_api_call(path, token):
-    print(path)
     return requests.get("https://www.strava.com/api/v3/" + path, headers={"Authorization": "Bearer " + token}).json()
 
 
