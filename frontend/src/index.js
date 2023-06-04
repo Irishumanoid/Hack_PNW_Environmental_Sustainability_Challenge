@@ -7,6 +7,7 @@ import {ThemeProvider} from "@mui/material/styles";
 import {CssBaseline, useMediaQuery} from "@mui/material";
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import light from "./theme/light";
+import TrailApp from "./routes/TrailApp";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -20,9 +21,13 @@ const router = createBrowserRouter([
         element: <TrailData/>
     },
     {
-        path: "/map",
-        element: <TestingMap/>
-    }
+        path: "/app",
+        element: <TrailApp/>
+    },
+    // {
+    //     path: "/map",
+    //     element: <TestingMap/>
+    // }
 ])
 
 
