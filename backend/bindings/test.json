@@ -1,0 +1,224 @@
+{
+    "segments": [
+        {
+            "id": 17685722,
+            "resource_state": 2,
+            "name": "Mercer Island Loop (CCW)",
+            "climb_category": 0,
+            "climb_category_desc": "NC",
+            "avg_grade": -0.1,
+            "start_latlng": [
+                47.589086,
+                -122.248157
+            ],
+            "end_latlng": [
+                47.576347,
+                -122.205862
+            ],
+            "elev_difference": 49.6,
+            "distance": 16410.8,
+            "points": "wvmaH~qciVbMGt@H~DxAtE`AjB^h@Fj@A`AMdB]dCm@tB]pBJd@?PC`@QZYtCeFjBqDn@w@x@k@r@YvA}@r@{@pDgFh@}@Xo@Hs@Cs@@s@XwA~@gBt@qBlAcCxEgHnBeCl@aANa@Nu@HcD^yC\\gAn@mAh@_BDc@AwCBYTm@v@w@^Qf@OhAO\\KPMZm@Pk@@WH}FF}ALc@N[RSdA]xAK|AOHChAs@dA_BVSZIZ@bBZtBZvBHZGXQVYT_@lA_BXGXAp@FdBW~@Ub@IzBCxB[x@EtEIt@IfBeAvCqELMb@Mb@?dAJ`@?^K~@g@X_@Tg@j@oBZ_@^O`@B^LnDfBz@t@hAdBd@rAd@nBd@hD@r@I~A?TFf@L\\TVn@`@lBVtAFlALlAFtAMtA[\\?^FV^r@~BV\\d@V`Gn@`Cr@rCf@vB@rBFb@Dd@NxAxApBjCp@t@lEjDhB`@vAN`BJpBR|D`Af@RTTN\\~@pCjArBl@t@xA|A|A|A~AtAh@h@bAnCdAnB`DrCfAx@|@`@d@LlANjBZTAf@QRY~@}BtA_Bh@y@ZU^GjALz@EbBu@f@a@bByALKzAo@x@yAPk@NeABm@LuALe@b@iA~@eBJg@H_APyC\\sAjCsF|A{C|AkDbAcB^g@bBaB^g@Zm@Vu@f@qBlAaCJe@Bm@Go@Sk@q@cAcAm@]Cm@BoC\\]GWYWu@cAeCu@eAy@_BIg@OeDWuB]gAcDeGqGmKaEkGW_@s@s@w@_@oAcA_BsB}@sB}@}CKSw@_AgCyB_Ak@uAw@uDaBw@QsAOm@D{@TM@q@PgBVqBAo@@g@A{DAyA@k@BeEGq@@a@NSXkAvBgAdBY|@YlA[\\OHm@G?a@|@wGH_DC_@K[OWUQUG{@CqBBiBVo@Zs@r@iAXqCUoFWw@AwAt@gAJo@Z[C_@Se@a@[MYAWJSZWp@]fDWT]ASWKeAO_CQ_@IKMEWIYAcBBw@HUT]tAYTWKQOUe@USYIWBMJI`@EpAS\\]B]E}@WK?Ub@Il@IdDINa@La@AUUM]UiCG[KWQOQE_@PW?g@a@Uo@_@]SKSCmBE}@NWPMR_@x@[f@aB|@Y@c@KKIKOKc@Ec@GaBI_@MUUEaBZ_AFcAg@SCQFa@d@[D[GSWMe@Yg@k@_@UGS?_@JQ@UC[G_@O}@}@c@My@BOJMXG\\GfDKt@WXm@d@[AY[Qu@BWBeDOc@Q[SWUOy@KSDMLGXMtBMXu@a@OYWyAO_@USs@QYAUFUP[^WF]Kg@g@{@gAuAqBc@}@UQcAM[QkBgC{AuAqAoBgGiMk@q@g@]yASsDl@{@FiG?eBJ",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/JCT4WO4FXFYKTVVRBQZ56K4EAZO5MQ2MVZ4MMX44H5E6OHQ3VRJJRMMV7KKANHEZNOCGBDKBWIIBP226MX6Q====",
+            "local_legend_enabled": true
+        },
+        {
+            "id": 16679364,
+            "resource_state": 2,
+            "name": "520 Bridge Westbound",
+            "climb_category": 0,
+            "climb_category_desc": "NC",
+            "avg_grade": -0.8,
+            "start_latlng": [
+                47.637706,
+                -122.238567
+            ],
+            "end_latlng": [
+                47.645248,
+                -122.301452
+            ],
+            "elev_difference": 38.0,
+            "distance": 4820.5,
+            "points": "sfwaH`vaiVARIPO`AQdBYtE_@tCaApJqDxd@sGhv@oAhOiKrnAo@~FoDhZ]jDUdDQjD[`Lq@f]MvDw@zPWbJCtGDpDXhMZdK?pC",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/3EP2V7JIOWB4I2BSQ722QTDF7SP6NXRI5VKLGNDCG6EVMI5ZCXJIPHNCWVQKHZEI4MODUOTQSO2NGD42SIZA====",
+            "local_legend_enabled": true
+        },
+        {
+            "id": 806362,
+            "resource_state": 2,
+            "name": "Last Frontier DH",
+            "climb_category": 0,
+            "climb_category_desc": "NC",
+            "avg_grade": -19.0,
+            "start_latlng": [
+                47.5698319170624,
+                -121.83458332903683
+            ],
+            "end_latlng": [
+                47.56665148772299,
+                -121.83749562129378
+            ],
+            "elev_difference": 95.0,
+            "distance": 500.8,
+            "points": "m~iaHdyrfV`@Lh@Bh@QLD?HJFDZJF?CEEB^HTDDLCd@@LNA`@L?NGPIDIN\\AJWLXEd@AJBH`@LDD?DMF?NBLFBFATFABHHDTr@XT\\t@\\h@\\|@JDHAJb@B\\BFAF",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/TJ6AAJANIJ2JHD5Y3YUZ7FQZ6EPKVWNUAEVFKTUSRIEHCNQSYWVNVTPHIEXN233TT2ADDQVZJ2TYLPJ7J5FA====",
+            "local_legend_enabled": true
+        },
+        {
+            "id": 18538740,
+            "resource_state": 2,
+            "name": "East bound & down",
+            "climb_category": 0,
+            "climb_category_desc": "NC",
+            "avg_grade": -22.6,
+            "start_latlng": [
+                47.476358,
+                -121.917132
+            ],
+            "end_latlng": [
+                47.472402,
+                -121.918002
+            ],
+            "elev_difference": 154.2,
+            "distance": 682.1,
+            "points": "evw`Hb}bgV@ED?\\\\ZNJLF@J_ABe@N_@TsA@?Rd@Hb@FFHRv@p@HFF@`@\\PHVVT`@FFLCDK@SKs@BUBCB?XZFDp@JL?j@VHAHLBh@EPGAGHE\\@DH?HERYXMLi@Nl@Ph@@JKL?HHDP@RKXBFEPRFANINCLS?Q",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/LARFKKJ6TQVQWRQNGOG5IBL6PZM3IMUMQXJEKHKS46KLIUH6GB77YHHDJHEQEXYVKD4PVYU6VGP2Z4OZFYFA====",
+            "local_legend_enabled": true
+        },
+        {
+            "id": 10949888,
+            "resource_state": 2,
+            "name": "Derailed",
+            "climb_category": 0,
+            "climb_category_desc": "NC",
+            "avg_grade": -5.2,
+            "start_latlng": [
+                47.802495,
+                -122.593881
+            ],
+            "end_latlng": [
+                47.811097,
+                -122.586008
+            ],
+            "elev_difference": 77.7,
+            "distance": 1501.0,
+            "points": "qlwbHxbgkVOMIDUi@Ws@OL[Pi@yAQoAGEO}@EK]]aAeC_@C[DwAkAQ?u@xA[Ra@Iq@a@Wo@AkAMPQl@EhA]Xa@d@_A@m@As@GYQO}BEWe@[}@qBSOQm@Ik@Mg@o@@e@cA@qACs@KgAm@]SIk@m@YQk@Os@E}@fAJy@[h@WJg@SEMMsAc@cAGy@E[GeAa@Y",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/URFUYSOGVOZPFPR46QTD6IRDBW6ZYW4ZLMQDCYAI6XCGZZEHNKLSIVZ2XPSRHHSW4E7UWJYGPCILPEFKRARBM===",
+            "local_legend_enabled": true
+        },
+        {
+            "id": 19989069,
+            "resource_state": 2,
+            "name": "520 Hill Climb Time to Summit",
+            "climb_category": 1,
+            "climb_category_desc": "4",
+            "avg_grade": 4.9,
+            "start_latlng": [
+                47.668975,
+                -122.129923
+            ],
+            "end_latlng": [
+                47.654706,
+                -122.139156
+            ],
+            "elev_difference": 88.8,
+            "distance": 1800.8,
+            "points": "aj}aH`olhVh@BZAz@MzBaBh@SZBZRjAxBh@lAdAvCn@xA^p@|@vAhB`CfAbA~AnAp@^|B~AdAj@nHbDjBn@rAh@pArAbBr@|BhA`EdBNDdAPt@X~E~B~A|@hCnAZPNLJB",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/5NGPQIWZRQYZBBFGAANJPZNWXLT3J7ZTBXR2GS7GOLGDMZJKPQMFMFKF5PA643VHFLCTXIUGPK445XPWVRAJE===",
+            "local_legend_enabled": true
+        },
+        {
+            "id": 609135,
+            "resource_state": 2,
+            "name": "Zoo Hill Climb",
+            "climb_category": 2,
+            "climb_category_desc": "3",
+            "avg_grade": 8.5,
+            "start_latlng": [
+                47.55348318256438,
+                -122.0771873742342
+            ],
+            "end_latlng": [
+                47.54851304925978,
+                -122.11124807596207
+            ],
+            "elev_difference": 302.8,
+            "distance": 3562.4,
+            "points": "gxfaHlebhVo@|CAPC|@Bj@j@rE@T[`Bg@dBEVJdAZb@f@`@|@ZvCt@hA`@\\b@Jf@@l@IbB?hBEd@Op@Sf@{@b@{@Cq@D_ASYDWZSt@L~@\\`@`AT`APTJRBXJxBrAn@ZRDVHhAl@RDp@D^X?VC@e@BSA[@m@KS?a@FQXMj@@l@Pj@PZRT\\Rh@LdA@ZD`@AvCKlCEV@^^B|DA\\Db@?r@IlB?z@IjBAjDO`G?tABl@AlCJhEAlADdD?|@KvA@rACr@DpAGbCA|AHt@AZBvACfB@zALnBAf@Bf@Ax@KnCBl@J`AOlBGjCNpEG~CDbBDh@A`BDtBH|@GlFGfB",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/V2E2GM6Z3DSJWFRPKBTZZQAKUXRDWJL5QWET7DSRILMVOOLD25U4RITZ5IZ7UZXGZGSCCDGTL3Z2LSPB2CWQW===",
+            "local_legend_enabled": true
+        },
+        {
+            "id": 6528729,
+            "resource_state": 2,
+            "name": "Rocket Ride 2014",
+            "climb_category": 1,
+            "climb_category_desc": "4",
+            "avg_grade": 0.2,
+            "start_latlng": [
+                47.757571,
+                -122.250015
+            ],
+            "end_latlng": [
+                47.763191,
+                -122.131651
+            ],
+            "elev_difference": 164.8,
+            "distance": 68070.7,
+            "points": "ysnbHr}ciVDmAdB{Q`BwS|AePJaBN{ABg@GuAa@wBC{AXoDZ_DLq@b@oGTyBZqB^sAd@wAjCiK|A}FR{@r@eCj@aDTc@VcAXaBTcAN_AFy@@WEU@SCOAe@Bi@N}BAQOGQAICGMA_DD]J]NeDLqA?UHa@Hs@FqAPaBx@aF\\yAf@wAz@{BtF}PV{AR}A@q@KeCQiAWu@D_@?WISC{BQiBAw@MmA{@gCUc@[_@mAsA_@Q]Kw@Kc@@cARcA\\MFcAX_Ah@_@La@Js@Fe@?eAIq@M_@M]Qm@a@s@w@m@_Ac@w@[_Ag@iCU{AGcAEyA@e@HwANgAB}AJq@FwBNaBPsDFW@[FYXqFJsAPkAXmAd@aBd@eAfAeBfBuBfCeDPIR@p@JrBJj@LHAJETMLMP[No@RUd@{Ar@iDh@cCLSPOr@]NBb@PLALEh@[Z[jA{@RK^EXKVBVLDDLZPPn@CbA[fAgAj@_ATc@X[p@c@^Il@CHN?PM`CUjC@p@Dz@ZnAHZdAfCTVb@~@PJLRHZ^d@XJRAVDPFVD@VADKH[Lk@Fi@Be@FU?qAH{@Tm@`@]^uAfBm@hA]|@Sd@_A`Bi@z@SVm@j@WZUh@Kt@C\\E~C?~AFn@FJNJ^LX?j@FdAB~AL|BBdE?|CLrDBvABb@CNE`@WNOZg@f@gAb@m@VKRET?`ANVAxAi@XAbBNbBGzCCjBMpBApCSv@CjCWpBKz@AxBQZ?z@R\\Jx@d@`@L^F|AD`C?`@CVLFNDRCjHDfMCxG@xEC^EJGHKDi@BiDGsMM{DG}FEs@@_@F_@L[Ri@f@W`@gApBk@z@o@t@aBrAe@b@QTkAjCSVi@d@q@TiATuBj@{Ah@k@No@Bs@Eo@?WBm@NUJmB|Ao@^_Bv@sBjAc@XSHk@Fi@?aIa@W@[RUHS?MKKQGSYaCGyADi@E_Ag@sCc@uCScAa@{AUi@i@u@y@u@GKYSc@Me@E{@@g@H{@TiBt@s@b@c@RSH}@LsAAi@ImAWc@Qa@Uy@{@}@wAUk@So@_@aB[eBKiACeA?uAFkBTcBZyFd@cKNgCNgB\\}BP{@^oAr@_BZg@j@w@nDeEbBsBt@wAVm@\\gA^eBPmAHw@d@yGVyEBsCEyAGy@Gy@Mu@Qu@Ss@i@qA_@s@e@s@QUUUi@c@k@]uDgBgAq@_@e@MWgBaE[{AQcCg@}OMyG?kBDkBPgBReAhEaQlA_E`EgKrAyDDUdC}GfA{Bh@w@dAcAdEqBfBcArFiC`B{@x@k@|A{Ax@_Ap@cA\\o@`CuFzBwFnAoCn@cA^i@`@e@r@q@v@k@`C}ArB{A|ByAzB{A~IsFdEoC`KeG`IeFbDaB~BqAdEsCLKXc@Rm@Ns@JuAPok@Bi@Ny@@SI_ACi@B{BDe@Ru@CwAOeAE_@E{Dc@wDSaAU}ABk@Ck@K{@KU?[QgAA]Dq@AOa@aCSg@MMc@}@E_@Qo@GI?Oa@}AQ_@S]Yy@w@sA[s@CSMa@iAoBOa@EQKy@Ai@He@NMHK`CyDhAwAz@}@DSr@q@|@cA`@y@x@oA`AeBnBmCv@wAl@o@t@k@z@_@fAk@d@OjAk@zAe@|Au@`A]j@]d@m@Vu@Ji@Dg@@gAMaAm@}B_@uBs@eCYcCEsAFmICuJBqDAWOe@[UKEm@EcF?_@C}GK{@@cCCa@@e@EkBBaEEqG?{BAyD?{DCiBB_HIsCIyBKmA@mAI_@BMB]PO?ICUWIUWmCE]]w@cAmBC]Ay@BqCEWQk@KSMMa@EUDy@Vi@CKGIO_@[OGSCSPaAf@Y@YAeBa@{@KqA]gAFm@Vo@b@c@LQASCUIOOi@m@cA{@UMk@Mk@Ss@y@g@mAOi@?UTw@b@]p@o@jBsBhBaBVQ~BkApCgARMVSf@m@PWN[L_@Ja@PqA@iACgA@eLEaJ@uHWaR?gAOoO?qCUmSGkDCkE@YImF?}CI{EG{LAMGS@SMcBFwBAsFL[FIZCn@@^C`@G`@IZWpA}Ab@o@V_Ad@eD@wAA{H@]HMVI`C@^YJSFYBW?sBEu@?mCBSDMLExASfAU|AIdA?NALINOHUTsAVs@lB_E@SGYWi@aDwEoAgBgC}CeGaIeFgHk@}@eA}@{@}@sDyCuBmAgAa@iBk@wA]aASk@GsBK{@AuJ@iDBgACkABK?IEEKI_@BeDCwJDgODmCL_BL{@Ls@Pq@d@qAn@gAlCwFn@gAt@iBv@{AzAcDv@yAf@mAPYtAsDj@_CTiBLwABo@@oDE_BIgAYkCa@mBi@gB_AuBw@wA{@gAiAiAYSaBcAcA_@MIW_@gA{B_@m@uAaBm@m@e@[QSUKe@GW@aANk@?[Eo@QYGmAJSFU@ICQOMWEWHWLOd@Sp@UXMb@e@h@]bA]ZE^MfBc@rDmATQPYJe@BQ?c@MaAg@oBIgBK{@Qw@q@kBUy@U{@G]Aa@DcAFa@x@sCRsA?a@CeA_@oDEaADcATy@`@u@RU`CaCjDyDzEmEb@q@J]F_@@a@IiAGa@Ma@S]SSWOYGmAMWEUOSUQ[S_@K_@WmB[{CQmAWaAy@kBUu@Go@@k@Lw@jAoDN_@P]j@w@XYt@_@ZK\\Cz@C`EW\\Iv@c@t@q@V[tH_Kp@q@ZSv@[v@O|Hi@lBQXGXIr@YdA_Af@u@P_@ZkARkAfAwKRgCBaAE_@I[M[QYaBmA{BwAiBoAyAeA_@]iAsAeE_GqA{A]Ws@]u@Ye@Kc@GgAAaDJ}AHsDHoDPoANkC^oF`AeAH}@AcAW_Bc@qB{@_GwB[C{@WaEqAiBg@uJeDaGeB_JmCcAUwAI_A?iJx@qEZ_Kb@_IV{@?w@E_BQiAWe@Sw@c@mBkAgAu@wCaAoLmCgJ{BgAUaBc@mCi@qCs@iAUcBSy@Aw@D{AP}A`@sF|BwAv@i@b@i@j@e@p@}BzDs@~@c@b@e@Zc@Rc@Lw@Hu@@_@GaCi@oBYaIa@eD]mC]iAGq@@}AJmLbAoANiBX_Dl@wInBeCt@qAh@kAl@eBr@wDnB_FvB{DlAeBXaATyDfAu@VaAn@k@h@[\\W\\S^s@|AK\\C^JvA?ZGXMRGF{A^MHWV_@p@}@lBo@bB_@tA{@pE[pCO`AYlACh@@TNf@`@t@tBtCRf@Hr@?r@Gn@Of@KP[X]Ry@^e@\\c@f@mBrC_@\\QLuCv@uBr@UDYBmAOW@WFWNUR}DtEoA`Bg@t@aArBw@lCgBfEg@~AIj@El@?zCCR]bAEd@BRFNLJLHt@Rt@NPDNJJPDTAl@MfAQnCe@pDo@~FIz@?\\Fv@Pn@dApBVp@VpAJt@?ZAXGXm@`B[p@a@n@c@d@aCtA{BhASNUNc@f@[j@YhAGn@AdHAdACVKp@Sp@{@xA{IlMkAvAsA`Ay@t@_@p@m@nAgApAcAdAc@Z_Af@[XkCdDaBvAyBjCgAz@_C~CcAz@yAdA_Ad@UNQT]~@a@bBQhBGjBCb@I`@WbAk@vAWz@G^e@l@gAz@sAz@wDvBy@h@WZU^Md@Gj@Cj@@j@~@nKH|AX~BTt@dAnCh@|AlA|CRbAJjABtB?zGGxSGnAe@nBU`@}BjBcChA_E~Dc@b@_BtBqGtIiCxCwB`DiHpHqCdCeAtAq@hAiAhCaBzEa@fA[l@}@|A]t@Yx@a@zA_ArCgBzDu@lBIXIn@?b@BHHDH?HAHGJWVYdAm@lCsAd@i@hBsCzAoB`@y@jAiBVWh@Q`@EfBFdGBnBDnACfABtCAhOD\\Aj@G`GiAdAKlASPCt@DbBb@xAXbADz@ApBIrC?~DIpA@vAExA?zDIt@CtGEr@C|GIdD?`AAjA?tBC|DBhCCJBLFHLFRHbALh@Nj@Td@\\\\vCnBh@d@V^b@jANbAFhAAzFDdFD~@Z|Cb@pDx@zFJjADv@DhBCrBCd@UfBSbAiA`DO^mBfDoClDwAtBm@t@ONQFQ@cAUw@Gi@?i@D_GxA}DjAkCt@s@HsEGcGBaJCaE?eFEaBF{B@sAEs@@sAUm@IsCo@cFaAcBe@}AYkBe@}AYyA]e@GS?UDOJQPIRGVEj@?|FDhDC`L@`BCpE@rA?lDAbA?nEQz^?nDChDDhEL`@JLl@d@v@b@x@\\~Br@^HZBbAElC?`BG`AAzIPdBIxEA`FItH?jBFrBCpAJlBBrA?tJXdA@zEEhHF|FApAD~BBvI?bAAhC@nELhEBj@DrAZh@Bd@Id@ATBj@R|CdBjBz@v@T~AXjCn@n@Tp@`@hCl@xHtBN?NELMJQDUNmBPqAFs@B_CFOJGJ@JFjGxEz@d@|@`@|@\\rA^rAZhG~Az@Xh@ThAr@p@l@hArA|@xA~AxDd@tAd@rBZrBRxBHxABzFEjC@j@RlAZdAt@fDLt@Fv@EnCCrO?`JEvCAjIEdIH~@F^X|@NXPXj@j@r@^XHXBnB@v@DvA@dCJnAA~CFfCSzACnBOn@BNGh@IrDUnBGxA?tCWt@CxAMvAA`BKjAAREx@CfCCtBWnAAt@Gr@?tBOP@~AIn@Gl@KrBCtAI`@@jAGdCQhD?h@C|CA~CGlDHdDChI?lCGbD?nDIxAAxD@tEAxAFTAXIv@Ij@B|@CHAxA@^A",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/YF2VXUKTIINGAFSD2I7P72HG55DHIEGLF3SJVAL3RTXTCWTQ6DCVCBMVLSXXRURNHGGWTIYXWLVO4HXSYDFLA===",
+            "local_legend_enabled": true
+        },
+        {
+            "id": 810823,
+            "resource_state": 2,
+            "name": "Golden Gardens climb - more selective match?",
+            "climb_category": 1,
+            "climb_category_desc": "4",
+            "avg_grade": 5.1,
+            "start_latlng": [
+                47.68793258,
+                -122.40212179
+            ],
+            "end_latlng": [
+                47.69074177,
+                -122.39855108
+            ],
+            "elev_difference": 85.5,
+            "distance": 1661.7,
+            "points": "q`abHhtajVA]ScAm@FqAEk@DkARaBKmAx@YKg@XSORIXCj@s@TCLWJHFUNQLSj@]f@MTSFUNSPm@IQMy@S_@MBQIOCU[SHMIW?SGW@]F[A]BKGMD_@Ga@J_@?SZWHW?WM_@TQVSb@a@LW\\o@T[@]JSX_@AYU]I_@CWTk@`@OOMDQSIu@HqBFa@LSTu@ZO`@Iz@c@d@Ed@M^W|@MdAGh@e@rA]`@LTNb@G^A",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/HL32TLRHJ7LVHLKSIWUMMZQR34CNIGJFT2TY7MUDIDT2H4STCTDOPQVEYDF7U7XASDXV5VHI3BBJ3EVATUAHS===",
+            "local_legend_enabled": true
+        },
+        {
+            "id": 11502200,
+            "resource_state": 2,
+            "name": "Ground Control",
+            "climb_category": 0,
+            "climb_category_desc": "NC",
+            "avg_grade": -2.8,
+            "start_latlng": [
+                47.207843,
+                -122.399639
+            ],
+            "end_latlng": [
+                47.210357,
+                -122.401301
+            ],
+            "elev_difference": 14.8,
+            "distance": 422.3,
+            "points": "_hc_HvdajVINAR@`@B\\A\\E^MDGFEN_@JEFWv@]XQl@YZ[Hk@DIHSCK@OJYDCBDBI?KLUZGP_@JISMIYe@I[OQIi@",
+            "starred": false,
+            "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/2IZA3R5QZ2JMCGHTBUYWMOWFQKICOYW2QXZVW65N3S3ZUVLM3A2NV2QYTQLNIZGUEGDHUAYI72NEZJ6IRZLA====",
+            "local_legend_enabled": true
+        }
+    ]
+}
