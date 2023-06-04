@@ -44,17 +44,35 @@ export default function TrailApp(props) {
     const [isExpanded, setIsExpanded] = useState(0);
     const [trailData, setTrailData] = useState([]);
 
+    const [userLat, setUserLat] = useState(undefined);
+    const [userLong, setUserLong] = useState(undefined);
+
     const handleChange = (panel) => (event, newExpanded) => {
         setIsExpanded(newExpanded ? panel : 0);
     }
 
     const theme = useTheme()
 
+    
+
     useEffect(() => {
-        fetchTrailData(1, 47.6062, -122.3321, "8bd45d30c1c9e802f7f81a76d24245747dc474eb").then((it) => {
-            console.log(it)
-            setTrailData(it)
-        })
+        if (userLat && userLong)
+        {
+            fetchTrailData(1, userLat, userLong, "8bd45d30c1c9e802f7f81a76d24245747dc474eb").then((it) => {
+                console.log(it)
+                setTrailData(it)
+            })
+        }
+        
+    }, [userLat, userLong])
+
+    useEffect(() => {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            console.log("Latitude is :", position.coords.latitude);
+            console.log("Longitude is :", position.coords.longitude);
+            setUserLat(position.coords.latitude);
+            setUserLong(position.coords.longitude);
+        });
     }, [])
 
     return <Box>
