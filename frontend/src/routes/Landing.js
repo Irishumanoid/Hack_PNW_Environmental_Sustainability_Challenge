@@ -1,12 +1,13 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import PrettyLink from "../components/PrettyLink";
 import * as React from "react";
 import ImageCarousel from "../components/ImageCarousel";
 import Typography from "@mui/material/Typography";
-
 import {ImageList, ImageListItem, useMediaQuery, useTheme} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
+
 export default function Landing(props) {
 
     const REACT_APP_CLIENT_ID = 108420;
@@ -38,6 +39,7 @@ export default function Landing(props) {
                 data to suggest invigorating activities based on your unique fitness profile, ensuring every adventure
                 is a perfect fit.
             </Typography>
+            <Footer/>
         </div>
     )
 }
@@ -63,7 +65,7 @@ export function LandingImageSection(props) {
     const md = useMediaQuery(theme.breakpoints.up("md"))
 
     const height = `${((md ? 300 : 200) * 2) + (parseInt(theme.spacing(2), 10))}px`
-    const isSmall = useMediaQuery(theme.breakpoints.down("sm"))
+    const isSmall = useMediaQuery(theme.breakpoints.down("md"))
     console.log(`SMALL: ${isSmall}`)
     return (
         <Box>

@@ -1,6 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
 import HeaderTrailData from "../components/HeaderTrailData.js"
-import { Map, Marker } from "pigeon-maps"
+// import { Map, Marker } from "pigeon-maps"
 
 export default function TrailData(props) {
     const queryParameters = new URLSearchParams(window.location.search);
